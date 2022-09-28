@@ -36,7 +36,10 @@ if [[ ! -f "${INPUT_PROJECTBASEDIR%/}sonar-project.properties" ]]; then
     -Dsonar.login="${INPUT_LOGIN}" \
     -Dsonar.password="${SONAR_PASSWORD}" \
     -Dsonar.sources="${INPUT_PROJECTBASEDIR}" \
-    -Dsonar.sourceEncoding="${INPUT_ENCODING}"
+    -Dsonar.sourceEncoding="${INPUT_ENCODING}" \
+    -Dsonar.java.binaries=${INPUT_BINARIES} \
+    -Dsonar.exclusions=${INPUT_EXCLUSIONS}
+    
 else
   sonar-scanner \
     -Dsonar.host.url="${INPUT_HOST}" \
