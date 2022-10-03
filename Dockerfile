@@ -12,5 +12,5 @@ LABEL maintainer="dwisiswant0"
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-USER 1005
+USER 1002
 ENTRYPOINT ["/entrypoint.sh"]
